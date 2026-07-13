@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f5ff;
+  --color-primary-100: #e0ebff;
+  --color-primary-200: #c2d7ff;
+  --color-primary-300: #94b8ff;
+  --color-primary-400: #5e8eff;
+  --color-primary-500: #3b66f5;
+  --color-primary-600: #2546eb;
+  --color-primary-700: #1c33d6;
+  --color-primary-800: #1b29ad;
+  --color-primary-900: #1b268a;
+
+  --color-dark-50: #f6f6f9;
+  --color-dark-100: #ececf3;
+  --color-dark-200: #d5d5e3;
+  --color-dark-300: #b1b1cb;
+  --color-dark-400: #8585ad;
+  --color-dark-500: #646492;
+  --color-dark-600: #4e4e78;
+  --color-dark-700: #404062;
+  --color-dark-800: #1b1b2f;
+  --color-dark-900: #0f0f1b;
+
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+
+  --shadow-glow-primary: 0 0 15px rgba(59, 102, 245, 0.45);
+  --shadow-glow-green: 0 0 15px rgba(16, 185, 129, 0.45);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 transition-colors duration-300 font-sans antialiased selection:bg-primary-500 selection:text-white;
+  }
+  
+  body.dark {
+    @apply bg-dark-900 text-slate-200;
+  }
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full transition-colors;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-400;
+}
+
+/* Premium UI Utility Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-panel {
+  background: rgba(27, 27, 47, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.dark .glass-card-hover {
+  @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,102,245,0.15)] hover:border-primary-500/20 hover:-translate-y-1;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-indigo-600 dark:from-primary-400 dark:to-purple-400 font-extrabold;
+}
+
+/* Print optimizations for CV building output */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-area {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

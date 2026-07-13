@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "_id": "json_dfsvum8s87v5hk9um9g9eg",
+      "name": "Nandeesh Shetty",
+      "email": "nnm23cs117@nmamit.in",
+      "password": "$2b$10$GkoiGGffsngIo0CYFpgnL.00gUlK6pl.zdOJeQTK3wreQymnJyKVu",
+      "createdAt": "2026-07-13T18:08:02.364Z",
+      "updatedAt": "2026-07-13T18:08:02.364Z"
+    },
+    {
+      "_id": "json_o5zqz6dmqgchgbw6p9w1cw",
+      "name": "Nandeesh Shetty",
+      "email": "nandeesh_rand456@test.com",
+      "password": "$2b$10$ZhqJnP0XivNAPektYz6l.ef98oi3iWUeVQ.jcOTLDV43TaTJwVvOa",
+      "createdAt": "2026-07-13T18:17:55.890Z",
+      "updatedAt": "2026-07-13T18:17:55.890Z"
+    },
+    {
+      "_id": "json_r6oun6n221fbzspw2p1q7p",
+      "name": "Nandeesh Shetty",
+      "email": "nandeesh_rand789@test.com",
+      "password": "$2b$10$WnSS5YvlQ5iTbzfgkn1qX.VgEKIfd/RbT6.qqmaopINRljWOBCQTm",
+      "createdAt": "2026-07-13T18:19:19.949Z",
+      "updatedAt": "2026-07-13T18:19:19.949Z"
+    }
+  ],
+  "resumes": [],
+  "jobs": [],
+  "interviews": []
+}
